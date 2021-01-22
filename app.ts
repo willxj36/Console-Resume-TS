@@ -1,4 +1,4 @@
-let nameRaw = "Will Seese";
+let nameRaw: string = "Will Seese";
 
 console.log(nameRaw.toUpperCase());
 
@@ -8,15 +8,15 @@ console.log("Description: Jack of all trades looking to get into a single trade 
 
 console.log("\n" + "My Interests:");
 
-let interests = ["Golf", "Hiking", "Cars", "Learning"];
+let interests: string[] = ["Golf", "Hiking", "Cars", "Learning"];
 
-for (i = 0; i < interests.length ; i++) {
+for (let i = 0; i < interests.length ; i++) {
     console.log("* " + interests[i]);
 }
 
 console.log("\n" + "My Previous Experience:");
 
-function displayPosition(companyName, jobTitle, jobDesc) {
+function displayPosition(companyName: string, jobTitle: string, jobDesc: string): void {
     console.log("* " + jobTitle + " at " + companyName + " - " + jobDesc);
 }
 
@@ -26,7 +26,7 @@ displayPosition("The Plateau Club", "Spray Tech/Crew Foreman", "in charge of che
 
 console.log("\n" + "My Skills:");
 
-function displaySkill(skill, isCool) {
+function displaySkill(skill: string, isCool: string): void {
     if (isCool === "cool") {
         console.log("* " + "BAM: " + skill);
     } else {
@@ -34,9 +34,9 @@ function displaySkill(skill, isCool) {
     }
 }
 
-let skillSet = ["Golf", "Car Work", "Basic German", "Landscaping", "Offroading", "Math", "Excel coding"];
-let skillCool = ["cool", 0, 0, 0, "cool", 0, 0];
+let skillSet: string[] = ["Golf", "Car Work", "Basic German", "Landscaping", "Offroading", "Math", "Excel coding"];
+let skillCool: any[] = ["cool", 0, 0, 0, "cool", 0, 0];
 
-for (i = 0 ; i < skillSet.length ; i++) {
+for (let i = 0 ; i < skillSet.length ; i++) {
     displaySkill(skillSet[i], skillCool[i]);
 }
